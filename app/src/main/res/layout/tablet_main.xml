@@ -1,5 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:panel="http://schemas.android.com/apk/res/com.chasinglemons.empeg"
+    xmlns:panel="http://schemas.android.com/apk/res/com.chasinglemons.empeg2"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -495,7 +495,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <com.chasinglemons.empeg.KeyboardPanel
+    <com.chasinglemons.empeg2.KeyboardPanel
         android:id="@+id/kbdPanel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -524,13 +524,13 @@
             android:gravity="center"
             android:orientation="vertical" >
 
-            <com.chasinglemons.empeg.CustomKeyboardView
+            <com.chasinglemons.empeg2.CustomKeyboardView
                 android:id="@+id/keyboard_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom" >
-            </com.chasinglemons.empeg.CustomKeyboardView>
+            </com.chasinglemons.empeg2.CustomKeyboardView>
         </LinearLayout>
-    </com.chasinglemons.empeg.KeyboardPanel>
+    </com.chasinglemons.empeg2.KeyboardPanel>
 
 </RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:chasinglemonsseek="http://com.chasinglemons.empeg"
-    xmlns:chasinglemons="http://schemas.android.com/apk/res/com.chasinglemons.empeg"
+    xmlns:chasinglemons="http://schemas.android.com/apk/res/com.chasinglemons.empeg2"
     android:title="Preferences" >
 
     <PreferenceCategory
@@ -30,7 +30,7 @@
     <PreferenceCategory
         android:key="remoteCategory"
         android:title="Remote" >
-        <com.chasinglemons.empeg.ImageListPreference
+        <com.chasinglemons.empeg2.ImageListPreference
             android:entries="@array/lensNames"
             android:entryValues="@array/lensValues"
             android:key="activeLens"
@@ -92,7 +92,7 @@
     <PreferenceCategory
         android:key="discoveryCategory"
         android:title="Discovery" >
-        <com.chasinglemons.empeg.SeekBarPreference
+        <com.chasinglemons.empeg2.SeekBarPreference
             android:defaultValue="2"
             android:key="discoveryTimeout"
             android:max="20"

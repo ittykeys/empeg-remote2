@@ -1,25 +1,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chasinglemons.empeg"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chasinglemons.empeg2"
     android:versionCode="7"
     android:versionName="1.96.00hj" >
 
     <uses-sdk
-        android:minSdkVersion="13"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="28"
+        android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
 
     <application
+        android:theme="@android:style/Theme.Holo"
         android:name=".GlobalData"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        tools:replace="android:appComponentFactory" >
         <activity
             android:name=".Start"
+            android:exported="true"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +46,8 @@
         <activity
             android:name=".WidgetShowcase"
             android:label="Empeg widgets"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:exported="false" >
         </activity>
         <activity
             android:name=".Settings"
@@ -52,14 +58,10 @@
             android:icon="@drawable/player"
             android:label="Choose player" >
         </activity>
-        <activity
-            android:name=".LicensePopUp"
-            android:icon="@drawable/player"
-            android:label="Invalid License"
-            android:theme="@android:style/Theme.Dialog" >
-        </activity>
-        
-        <service android:name="NotificationService"></service>
+
+        <service
+            android:name=".NotificationService"
+            android:exported="false" />
         <receiver android:name="NotificationService$NotifButtonListener" />
 
     </application>
